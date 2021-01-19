@@ -1,0 +1,17 @@
+---
+layout: htmlBase.njk
+title: Huvudsidan
+---
+
+<h1>Detta är sajten</h1>
+
+<nav>
+  <a href="/page2">Sida 2</a>
+
+  {% for post in collections.blogposts %}
+    <a href="{{post.url}}">{{post.data.title}}</a>
+  {% endfor %}
+
+</nav>
+
+<img src="anka.jpg" alt="Den finaste ankan" width="300">
